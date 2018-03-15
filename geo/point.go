@@ -25,6 +25,14 @@ func (p Point) RadLon() float64 {
 	return p.lon * radPerDegree
 }
 
+func (p Point) Lat() float64 {
+	return p.lat
+}
+
+func (p Point) Lon() float64 {
+	return p.lon
+}
+
 const (
 	// one degree in radians
 	radPerDegree = math.Pi / 180.0
