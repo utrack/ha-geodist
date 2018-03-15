@@ -11,6 +11,14 @@ type Point struct {
 	ID string
 }
 
+// NewPoint creates a new Point.
+func NewPoint(id string, lat, lon float64) Point {
+	return Point{
+		Point: geo.NewPoint(lat, lon),
+		ID:    id,
+	}
+}
+
 // Points iterates over the collection of Point.
 type Points interface {
 	Next() (Point, error)
